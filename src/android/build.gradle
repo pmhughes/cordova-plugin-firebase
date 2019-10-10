@@ -6,12 +6,13 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:+'
-        classpath 'com.google.gms:google-services:4.2.0'
+        classpath 'com.google.gms:google-services:4.3.2'
         classpath 'io.fabric.tools:gradle:1.+'
     }
 }
 repositories {
     mavenCentral()
+    google()
     maven {
         url "https://maven.google.com"
     }

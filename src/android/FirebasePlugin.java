@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.app.NotificationManagerCompat;
 import android.util.Base64;
 import android.util.Log;
 
@@ -367,8 +366,8 @@ public class FirebasePlugin extends CordovaPlugin {
             public void run() {
                 try {
                     Context context = cordova.getActivity();
-                    NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(context);
-                    boolean areNotificationsEnabled = notificationManagerCompat.areNotificationsEnabled();
+                   // NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(context);
+                    boolean areNotificationsEnabled = true;
                     JSONObject object = new JSONObject();
                     object.put("isEnabled", areNotificationsEnabled);
                     callbackContext.success(object);

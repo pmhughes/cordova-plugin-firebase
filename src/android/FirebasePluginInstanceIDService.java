@@ -5,7 +5,7 @@ import android.util.Log;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessagingService;
 
-public class FirebasePluginInstanceIDService extends FirebaseInstanceIdService {
+public class FirebasePluginInstanceIDService extends FirebaseMessagingService {
 
     private static final String TAG = "FirebasePlugin";
 

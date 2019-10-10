@@ -14,7 +14,6 @@ public class FirebasePluginInstanceIDService extends FirebaseMessagingService {
      * the previous token had been compromised. Note that this is called when the InstanceID token
      * is initially generated so this is where you would retrieve the token.
      */
-    @Override
     public void onNewToken() {
         // Get updated InstanceID token.
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();

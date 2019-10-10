@@ -606,7 +606,8 @@ public class FirebasePlugin extends CordovaPlugin {
         public void run() {
             try {
                 byte[] bytes = namespace == null ? FirebaseRemoteConfig.getInstance().getByteArray(key)
-                        : FirebaseRemoteConfig.getInstance().getByteArray(key, namespace);
+                     //   : FirebaseRemoteConfig.getInstance().getByteArray(key, namespace);
+                       : FirebaseRemoteConfig.getInstance().getByteArray(key);
                 JSONObject object = new JSONObject();
                 object.put("base64", Base64.encodeToString(bytes, Base64.DEFAULT));
                 object.put("array", new JSONArray(bytes));
@@ -625,7 +626,8 @@ public class FirebasePlugin extends CordovaPlugin {
             try {
                 FirebaseRemoteConfigValue value = namespace == null
                         ? FirebaseRemoteConfig.getInstance().getValue(key)
-                        : FirebaseRemoteConfig.getInstance().getValue(key, namespace);
+                       // : FirebaseRemoteConfig.getInstance().getValue(key, namespace);
+                     : FirebaseRemoteConfig.getInstance().getValue(key);
                 callbackContext.success(value.asString());
             } catch (Exception e) {
                 Crashlytics.logException(e);
@@ -682,7 +684,8 @@ public class FirebasePlugin extends CordovaPlugin {
                     if (namespace == null)
                         FirebaseRemoteConfig.getInstance().setDefaults(defaultsToMap(defaults));
                     else
-                        FirebaseRemoteConfig.getInstance().setDefaults(defaultsToMap(defaults), namespace);
+                        FirebaseRemoteConfig.getInstance().setDefaults(defaultsToMap(defaults));
+                        //FirebaseRemoteConfig.getInstance().setDefaults(defaultsToMap(defaults), namespace);
                     callbackContext.success();
                 } catch (Exception e) {
                     Crashlytics.logException(e);
@@ -869,7 +872,7 @@ public class FirebasePlugin extends CordovaPlugin {
         });
     }
 
-    private void incrementCounter(final CallbackContext callbackContext, final String name, final String counterNamed) {
+   private void incrementCounter(final CallbackContext callbackContext, final String name, final String counterNamed) {
         final FirebasePlugin self = this;
         cordova.getThreadPool().execute(new Runnable() {
             public void run() {
@@ -881,7 +884,7 @@ public class FirebasePlugin extends CordovaPlugin {
                     }
 
                     if (myTrace != null && myTrace instanceof Trace) {
-                        myTrace.incrementCounter(counterNamed);
+                       // myTrace.incrementCounter(counterNamed);
                         callbackContext.success();
                     } else {
                         callbackContext.error("Trace not found");

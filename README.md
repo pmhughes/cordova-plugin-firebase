@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/freefiona85/cordova-plugin-firebase.svg?branch=master)](https://travis-ci.org/freefiona85/cordova-plugin-firebase)
-
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/freefiona85/cordova-plugin-firebase/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/freefiona85/cordova-plugin-firebase/?branch=master)
+[![Build Status](https://travis-ci.org/freefiona85/cordova-plugin-firebase.svg?branch=master)](https://travis-ci.org/freefiona85/cordova-plugin-firebase) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/freefiona85/cordova-plugin-firebase/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/freefiona85/cordova-plugin-firebase/?branch=master)
 
 # cordova-plugin-firebase - Fio's fork (Updated 28 October 2019)
 This plugin brings push notifications, analytics, event tracking, crash reporting and more from Google Firebase to your Cordova project!  Android and iOS supported. This fork built specifically for Phonegap Build (PGB) Straight (it may have dependency clash with other plugins/incompatibilities, though.).

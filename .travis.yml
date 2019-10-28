@@ -5,7 +5,6 @@ env:
 
 matrix:
   include:
-  
   - os: linux
     sudo: false
     language: android
